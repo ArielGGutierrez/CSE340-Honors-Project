@@ -1,0 +1,16 @@
+b, a, c, d;
+Foo(e)
+{
+	f;
+	Foo = e;
+	IF Foo < 5
+	{
+		print Foo;
+		f = Foo + 1;
+		Foo = Foo(f);
+	}
+}
+{
+	a = 0;
+	c = Foo(a);
+}

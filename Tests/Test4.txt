@@ -1,0 +1,38 @@
+a, b, sum, product, radical;
+Add(op1, op2)
+{
+	e;
+	Add = op1 + op2;
+}
+Mul(op1, op2)
+{
+	count;
+	
+	FOR(count = 0; count < op2; count = count + 1;)
+	{
+		Mul = Add(Mul, op1);
+	}
+}
+Pow(base, power)
+{
+	count;
+	
+	Pow = 1;
+	
+	FOR(count = 0; count < power; count = count + 1;)
+	{
+		Pow = Mul(Pow, base);
+	}
+}
+{
+	a = 3;
+	b = 4;
+	
+	sum = Add(a, b);
+	product = Mul(a, b);
+	radical = Pow(a, b);
+	
+	print sum;
+	print product;
+	print radical;
+}

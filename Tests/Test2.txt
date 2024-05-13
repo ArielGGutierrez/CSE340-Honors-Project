@@ -1,0 +1,22 @@
+a, b, c, d;
+Bar(g)
+{
+	l;
+	l = 3;
+	WHILE g > l
+	{
+		Bar = Bar + 1;
+		l = l + 1;
+	}
+}
+Foo(e)
+{
+	j, f, k;
+	print e;
+	Foo = Bar(e);
+}
+{
+	a = 4;
+	b = Foo(a);
+	print b;
+}

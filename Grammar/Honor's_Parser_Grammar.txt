@@ -1,0 +1,42 @@
+program -> varSection funcDeclList body inputs *
+varSection -> idList SEMICOLON *
+idList -> ID COMMA idList *
+idList -> ID *
+funcDecList -> funcDecl *
+funcDecList -> funcDecl funcDecList *
+body -> LBRACE stmtList RBRACE *
+funcDecl -> ID LPAREN idList RPAREN functionBody *
+functionBody -> LBRACE idList SEMICOLON stmtList RBRACE *
+stmtList -> stmt stmtList *
+stmtList -> stmt *
+stmt -> assignStmt *
+stmt -> whileStmt *
+stmt -> ifStmt *
+stmt -> switchStmt *
+stmt -> forStmt *
+stmt -> printStmt *
+assignStmt -> ID EQUAL primary SEMICOLON *
+assignStmt -> ID EQUAL functionCall SEMICOLON *
+assignStmt -> ID EQUAL expr SEMICOLON *
+expr -> primary op primary *
+primary -> ID *
+primary -> NUM *
+op -> PLUS *
+op -> MINUS *
+op -> MULT *
+op -> DIV *
+printStmt -> print ID SEMICOLON *
+whileStmt -> WHILE condition body *
+ifStmt -> IF condition body *
+condition -> primary relop primary *
+relop -> GREATER *
+relop -> LESS *
+relop -> NOTEQUAL *
+switchStmt -> SWITCH ID LBRACE caseList RBRACE *
+switchStmt -> SWITCH ID LBRACE caseList defaultCase RBRACE *
+forStmt -> FOR LPAREN assignStmt condition SEMICOLON assignStmt RPAREN body *
+caseList -> case caseList *
+caseList -> case *
+case -> CASE NUM COLON body *
+defaultCase -> DEFAULT COLON body *
+#

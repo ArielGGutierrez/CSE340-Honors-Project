@@ -1,0 +1,12 @@
+b, a, c, d;
+Foo(e)
+{
+	j, f, k;
+	print e;
+	Foo = e + 1;
+}
+{
+	a = 2;
+	b = Foo(a);
+	print b;
+}
