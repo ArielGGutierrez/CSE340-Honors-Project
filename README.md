@@ -1,5 +1,4 @@
 # CSE 340 Honors Contract
-Ariel Gutierrez 1218982505
 
 This is my submission for the honors contract for CSE340.  This project adds support for functions to the language specified in Project 3.
 One thing that the honors contract file fails to address is scoping.  Because of time constraints I chose not to implement neither static
